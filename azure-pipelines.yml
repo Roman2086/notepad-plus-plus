@@ -10,6 +10,6 @@ pool:
   Dev
 
 steps:
-- script: |
-    make
-  displayName: 'make'
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
