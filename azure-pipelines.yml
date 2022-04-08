@@ -10,6 +10,8 @@ pool:
   Dev
 
 steps:
-- task: VSBuild@1
+- task: MSBuild@1
   inputs:
-    solution: '**\*.sln'
+    solution: '**/*.sln'
+    msbuildArchitecture: 'x64'
+    platform: 'x64'
