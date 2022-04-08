@@ -16,5 +16,7 @@ steps:
     msbuildArchitecture: 'x64'
     platform: 'x64'
 
-- publish: $(System.DefaultWorkingDirectory)/bin/NPP
-  artifact: NPP
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: $(System.DefaultWorkingDirectory)/bin/NPP
+    artifactName: NPP
